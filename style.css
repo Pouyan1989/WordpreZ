@@ -1,0 +1,233 @@
+/*
+[italic]Theme Name:my Amuuko
+author:Pouyan
+Version:1.0 
+*/
+
+body{
+	font-family:Arial,sans-serif;
+	font-size:14px;
+	color:#333;
+}
+a:link,
+a:visited{
+	 color:#006ec3;
+}
+p{
+	line-height:1.65em;
+}
+/*General layout*/
+div.container{
+	max-width:920px;
+	margin:0 auto;
+	padding-left:20px;
+	padding-right:20px;
+}
+/*Header*/
+.site-header{
+  border-bottom:2px solid #9999;
+}
+
+.site-header a{
+  text-decoration: none;
+}
+
+/*Footer*/
+.site-footer{
+	margin-top:30px;
+	border-top:2px solid #9999;
+}
+ article.post{
+	border-bottom: 2px dotted #bbbbbb;
+ }
+ article.post:last-of-type{
+	 border-bottom:none;
+ }
+ /*Navigation Menus*/
+ .site-nav ul{
+	 margin:0;
+	 padding:0;
+ }
+ 
+ .site-nav ul:before,.site-nav ul:after{ content:"";display:table;}
+ .site-nav ul:after{clear:both;}
+ .site-nav ul{*zoom:1;}
+ .site-nav ul li {
+	 list-style:none;
+	 float:left;
+ }
+
+ /*site Header Menu*/
+ .site-header nav ul li{
+	 margin-right:5px;
+	
+ }
+ .site-header nav ul li a:link,
+ .site-header nav ul li a:visited{ 
+	display:block;
+	padding:10px 18px;
+	border:1px solid #BBB;
+	border-bottom:none;
+	text-decoration:none;
+ }
+ 
+ .site-header nav ul li a:hover { 
+	background-color:#ECECEC;
+ }
+ .site-header nav ul li.current-menu-item a:link,
+ .site-header nav ul li.current-menu-item a:visited,
+ .site-header nav ul li.current-page-ancestor a:link,
+ .site-header nav ul li.current-page-ancestor a:visited
+ {
+	 background-color:#006ec3;
+	 color:#FFF;
+ }
+
+ /* Footer Menu*/
+ .site-footer{
+	text-align: center;	
+ }
+ 
+ .site-footer nav ul li{
+	 margin-top:5px;
+	 margin-right:10px;
+	 padding-right:5px;
+	 border-right:1px dotterd #BBB;
+	 display: inline-block;
+     float: none;
+ }
+ .site-footer nav ul li a{
+	  text-decoration:none;
+	 
+ }
+ 
+ #copyright{
+	 margin-top:1px;
+ }
+ 
+ /* Page Layout*/
+ article.page h2{   /* pay attention to article.page*/
+	 font-size:300%;
+ }
+
+
+ /*clearfix*/
+
+ .clearfix:before, .clearfix:after{content:"";display:table;}
+ .clearfix:after{clear:both;}
+ .clearfix{*zoom:1}
+
+ 
+ /*two column title layout*/
+ div.little-column {
+ 	width:30%;
+ 	float:left;
+
+ }
+ div.text-column {
+
+ 	width:70%;
+ 	float:right;
+ }
+ 
+ /*info box*/
+ div.info-box {
+
+ 	width:40%;
+ 	float:right;
+ 	margin:0 0 30px 30px;
+ 	padding:20 px;
+ 	background-color:#EEE;
+
+ }
+ 
+ div.info-box h4 {
+ 	margin-bottom: 6px;
+
+ }
+
+
+
+div.info-box p {
+
+	font-size: 85%;
+}
+
+div.hd-search {
+
+float:right;
+
+}
+
+div.hd-search label{
+
+position:absolute;
+left:-9999px;
+
+}
+div.hd-search #searchsubmit{
+background-color: #006ec3;
+color:#FFF;
+padding:5px 14px;
+border:none;
+vertical-align:top;
+}
+
+div.hd-search #s{
+padding: 3px; 	
+vertical-align: top;
+}
+
+.children-links ul {
+
+float:left;
+
+}
+
+.children-links a:link,
+.children-links a:visited{
+	text-decoration: none;
+}
+
+.children-links .current_page_item a:link,.children-links .current_page_item a:visited{
+
+ border-bottom: 1px solid #DDD;
+ color:#333;
+ cursor:default;
+
+}
+
+
+.children-links .parent-link a:link,
+.children-links .parent-link a:visited{
+	color:#333;
+}
+
+
+.children-links {
+
+margin-top:20px;
+margin-bottom: 20px;
+font-size:80%;
+
+}
+
+.children-links li {
+
+margin-right:20px;
+
+
+}
+
+.children-links .parent-link {
+
+float:left;
+margin-right:20px;
+padding-right: 20px;
+border-right: 1px solid #DDD;
+font-size:120%;
+font-weight: bold;
+
+
+
+}
