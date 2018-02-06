@@ -3,45 +3,16 @@
  
  if (have_posts()):   /*it says if we have posts .do this  */
 
- 	while(have_posts()):the_post();?>  
-
-    <article class="post">
-
-    	<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-    	<p class="post-info"><?php the_time('F jS,Y g:i a');?> | by <a href="<?php get_author_posts_url(get_the_author_meta('ID'));?>"><?php the_author();?></a> | Posted in 
-
-			<?php 
-			$categories=get_the_category();
-			$seperator=",";
-			$output='';
-
-			if ($categories) {
-
-				foreach ($categories as $category) {
-					
-					$output .='<a href="' .get_category_link($category->term_id). '">'.$category->cat_name.'</a>'.$seperator;
-				}
+ 	while(have_posts()):the_post();
 
 
-					echo trim($output,$seperator); // will remove anything at the beggining or the end anything that resembles our seperator
+ 		if (get_post_format() == false) {
+		get_template_part('content', 'single');
+	} else {
+		get_template_part('content', get_post_format());
+	}
 
-			}
-
-
-			?></p>
-	    
-
-			<?php the_post_thumbnail('banner-image');?>
-	    <?php   the_content();
-
-	 
-
-
-	    ?>
-	</article>
- 	
-
-	<?php endwhile;
+	 endwhile;
 
 else:
 

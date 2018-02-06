@@ -72,4 +72,59 @@ function get_top_ancestor_id(){
 	add_action('after_setup_theme','learningwordpress_setup');
 
 
+	//add post format http_support()
+
+	 add_theme_support('post-formats',array('aside','gallery','link'));
+
+
+function ourWidgetsInit() {
+	
+	register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'sidebar1',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 1',
+		'id' => 'footer1',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 2',
+		'id' => 'footer2',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 3',
+		'id' => 'footer3',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+	register_sidebar( array(
+		'name' => 'Footer Area 4',
+		'id' => 'footer4',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+	
+}
+
+add_action('widgets_init', 'ourWidgetsInit');
 
