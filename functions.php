@@ -44,4 +44,36 @@ function get_top_ancestor_id(){
 	}
 
 
+	//customize excerpt word count link 
+
+	function custom_excerpt_lenght() {
+
+
+		return 25;
+	}
+
+
+	add_filter('excerpt_lenght','custom_excerpt_lenght');
+
+
+
+
+//add featured image
+
+
+	function learningwordpress_setup(){
+
+		add_theme_support('post-thumbnails');
+		add_image_size('small-thumbnail',180,120,true);
+		add_image_size('banner-image',920,210,array('left','top'));
+
+	}
+
+	add_action('after_setup_theme','learningwordpress_setup');
+
+
+	//add post format http_support()
+
+	 add_theme_support('post-formats',array('aside','gallery','link'));
+
 
