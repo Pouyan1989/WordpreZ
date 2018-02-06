@@ -5,13 +5,7 @@
 
  	while(have_posts()):the_post();?>  
 
-    <article class="post <?php if(has_post_thumbnail()){?>has-thumbnail<?php }?>">
-
-    	<div class="post-thumbnail">
-
-    		<a href="<?php the_permalink();?>"><?php the_post_thumbnail('small-thumbnail');?></a>
-
-    	</div>
+    <article class="post">
 
     	<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
     	<p class="post-info"><?php the_time('F jS,Y g:i a');?> | by <a href="<?php get_author_posts_url(get_the_author_meta('ID'));?>"><?php the_author();?></a> | Posted in 
@@ -34,33 +28,16 @@
 			}
 
 
-			?>
-
-		</p>
-
-
-
+			?></p>
 	    
-	    <?php 
 
-	    if ($post->post_excerpt){ ?>
+			<?php the_post_thumbnail('banner-image');?>
+	    <?php   the_content();
 
-	    		<?php echo get_the_excerpt();  //by using excerpt instead of the content function every single post will automatically get the read more ... ?>
-
-				<a href="<?php the_permalink();?>">Read more&raquo;</a>
-
-	    </p>
+	 
 
 
-	    <?php } else {
-
-	    	the_content();
-
-	    }
-
-	    ?>	    
-
-	    
+	    ?>
 	</article>
  	
 

@@ -3,6 +3,7 @@
 author:Pouyan
 Version:1.0 
 */
+
 body{
 	font-family:Arial,sans-serif;
 	font-size:14px;
@@ -25,6 +26,10 @@ div.container{
 /*Header*/
 .site-header{
   border-bottom:2px solid #9999;
+}
+
+.site-header a{
+  text-decoration: none;
 }
 
 /*Footer*/
@@ -51,6 +56,7 @@ div.container{
 	 list-style:none;
 	 float:left;
  }
+
  /*site Header Menu*/
  .site-header nav ul li{
 	 margin-right:5px;
@@ -69,10 +75,14 @@ div.container{
 	background-color:#ECECEC;
  }
  .site-header nav ul li.current-menu-item a:link,
- .site-header nav ul li.current-menu-item a:visited{
+ .site-header nav ul li.current-menu-item a:visited,
+ .site-header nav ul li.current-page-ancestor a:link,
+ .site-header nav ul li.current-page-ancestor a:visited
+ {
 	 background-color:#006ec3;
 	 color:#FFF;
  }
+
  /* Footer Menu*/
  .site-footer{
 	text-align: center;	
@@ -99,7 +109,172 @@ div.container{
  article.page h2{   /* pay attention to article.page*/
 	 font-size:300%;
  }
+
+
+ /*clearfix*/
+
+ .clearfix:before, .clearfix:after{content:"";display:table;}
+ .clearfix:after{clear:both;}
+ .clearfix{*zoom:1}
+
  
+ /*two column title layout*/
+ div.little-column {
+ 	width:30%;
+ 	float:left;
+
+ }
+ div.text-column {
+
+ 	width:70%;
+ 	float:right;
+ }
  
+ /*info box*/
+ div.info-box {
+
+ 	width:40%;
+ 	float:right;
+ 	margin:0 0 30px 30px;
+ 	padding:20 px;
+ 	background-color:#EEE;
+
+ }
  
- 
+ div.info-box h4 {
+ 	margin-bottom: 6px;
+
+ }
+
+
+
+div.info-box p {
+
+	font-size: 85%;
+}
+
+div.hd-search {
+
+float:right;
+
+}
+
+div.hd-search label{
+
+position:absolute;
+left:-9999px;
+
+}
+div.hd-search #searchsubmit{
+background-color: #006ec3;
+color:#FFF;
+padding:5px 14px;
+border:none;
+vertical-align:top;
+}
+
+div.hd-search #s{
+padding: 3px; 	
+vertical-align: top;
+}
+
+.children-links ul {
+
+float:left;
+
+}
+
+.children-links a:link,
+.children-links a:visited{
+	text-decoration: none;
+}
+
+.children-links .current_page_item a:link,.children-links .current_page_item a:visited{
+
+ border-bottom: 1px solid #DDD;
+ color:#333;
+ cursor:default;
+
+}
+
+
+.children-links .parent-link a:link,
+.children-links .parent-link a:visited{
+	color:#333;
+}
+
+
+.children-links {
+
+margin-top:20px;
+margin-bottom: 20px;
+font-size:80%;
+
+}
+
+.children-links li {
+
+margin-right:20px;
+
+
+}
+
+.children-links .parent-link {
+
+float:left;
+margin-right:20px;
+padding-right: 20px;
+border-right: 1px solid #DDD;
+font-size:120%;
+font-weight: bold;
+
+}
+
+/*post styles */
+
+.post h2{
+
+
+margin-bottom: 0;
+
+}
+
+p.post-info {
+
+	font-size: 87%;
+	color:#999;
+}
+
+
+p.post-info a:link,p.post-info a:visited{
+
+	color:#999;
+
+}
+
+img{
+
+ max-width: 100%;
+ height: auto;
+
+}
+
+.has-thumbnail {
+
+	position:relative;
+	padding-left: 200px;
+
+
+
+
+}
+
+.post-thumbnail{
+
+
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+
